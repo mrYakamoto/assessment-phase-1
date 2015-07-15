@@ -29,24 +29,46 @@ RSpec.describe ShippingContainer do
   end
 
   describe 'working with crates', { pending: true } do
-    describe '#add_segment' do
-      it 'adds object to segement collection' do
-        new_segment = Crate.new
-        shipping_container.add_segment(new_segment)
-        expect(shipping_container.crates).to include new_segment
-      end
-    end
-
-    describe 'distance calculations' do
-      describe '#total_miles' do
-        it 'sums the miles of each crate' do
-          expect(shipping_container.total_miles).to eq ShippingContainer
+    describe '#current_weight' do
+      context 'when empty' do
+        let(:shipping_container) { ShippingContainer.new(destination: 'Hawaii', max_containers: 10, max_weight: 500)}
+        it 'returns 0' do
+          expect(shipping_container.current_weight).to be 0
         end
       end
 
-      describe '#average_miles_per_segment' do
-        it 'averages the miles of the trip over the crates' do
-          expect(shipping_container.average_miles_per_segment).to eq 625
+      context 'when one or more containers has been loaded' do
+        it 'returns the total weight of the crates' do
+          expect(shipping_container.current_weight).to eq 400
+        end
+      end
+    end
+
+    describe '#containers_count' do
+      it 'returns the number of containers currently loaded' do
+        expect(shipping_container.containers_count).to eq 2
+      end
+    end
+
+    describe '#add_crate' do
+      let(crate) { Crate.new(weight: 50) }
+      context 'when within max weight and max containers' do
+        it 'returns true' do
+          expect(shipping_container.add_crate(crate)).to be true
+        end
+      end
+
+      context 'when exceeding max weight' do
+        let(:shipping_container) { ShippingContainer.new(destination: 'Hawaii', crates: crates, max_weight: 425, max_containers: 10)}
+        it 'returns false' do
+          expect(shipping_container.add_crate(crate)).to be false
+        end
+      end
+
+      context 'when exceeding max containers' do
+        let(:shipping_container) { ShippingContainer.new(destination: 'Hawaii', crates: crates, max_weight: 500, max_containers: 2)}
+        it 'returns false' do
+          expect(shipping_container.add_crate(crate)).to be false
         end
       end
     end
