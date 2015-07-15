@@ -1,18 +1,20 @@
-CREATE TABLE publishers (
+CREATE TABLE teams (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR NOT NULL UNIQUE,
+  sport VARCHAR NOT NULL UNIQUE
+);
+
+CREATE TABLE players (
   id INTEGER PRIMARY KEY,
   name VARCHAR NOT NULL UNIQUE
 );
 
-CREATE TABLE authors (
-  id INTEGER PRIMARY KEY,
-  name VARCHAR NOT NULL UNIQUE
-);
-
-CREATE TABLE books (
+CREATE TABLE positions (
   id INTEGER PRIMARY KEY,
   title VARCHAR NOT NULL,
-  author_id INTEGER NOT NULL,
-  publisher_id INTEGER NOT NULL,
-  FOREIGN KEY(author_id) REFERENCES author(id),
-  FOREIGN KEY(publisher_id) REFERENCES publisher(id)
+  jersey_number INTEGER NOT NULL,
+  team_id INTEGER NOT NULL,
+  player_id INTEGER NOT NULL,
+  FOREIGN KEY(team_id) REFERENCES team(id),
+  FOREIGN KEY(player_id) REFERENCES player(id)
 );
