@@ -1,11 +1,6 @@
-class Segment
-
-  attr_reader :origin, :destination, :miles
-
-  def initialize(args = {})
-    @origin = args[:origin]
-    @destination = args[:destination]
-    @miles = args[:miles]
+class Crate
+  attr_reader :weight
+  def initialize(weight: 0)
+    @weight = weight
   end
-
 end
