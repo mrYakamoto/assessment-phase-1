@@ -1,15 +1,17 @@
-class Category
-
-  attr_accessor :name, :description
+class Song
+  attr_accessor :title, :length
   attr_reader :playlists
 
   def initialize(args = {})
-    @name = args.fetch(:name)
-    @description = args.fetch(:descriptions)
+    @title = args.fetch(:title)
+    @length = args.fetch(:length)
+
     @playlists = []
   end
 
   def add_playlist(playlist)
     playlists << playlist
+    playlist.add_song(self)
   end
+
 end
