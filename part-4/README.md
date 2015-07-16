@@ -1,62 +1,63 @@
 # Part 4: SQL Queries
 ## Summary
 In this part of the assessment you will be working with the provided SQL database
-`bookshelf.sqlite` to demonstrate your ability to construct queries. The schema
-(image below) is made up of three tables, `books`, `authors`, and `publishers`.
+`directory.sqlite` to demonstrate your ability to construct queries. The schema
+(image below) is made up of three tables, `teams`, `players`, and `positions`.
 
 ![Schema](data/schema.png)
 
 To get started open a SQLITE session in the console with the following command (note: assuming in the part-4 directory)
 
 ```bash
-$ sqlite3 bookshelf.sqlite
+$ sqlite3 directory.sqlite
 ```
+
 ## Releases
 ### Release 0: `SELECT`
 In your terminal, create and execute the following queries:
-- show all the books
-- show all the publishers
-- show all the authors
+- show all the teams
+- show all the players
+- show all the positions
 
-Copy the terminal output and paste the results into the `part-4/queries.md` file.
+Copy the terminal output (both your query and the results) and paste the results into the `part-4/queries.md` file.
 
 ### Release 1: `WHERE`
 In your terminal, create and execute the following queries:
-- show all the books containing "Ruby" in the title
-- show the authors with a name starting with "Dav"
+- show all the teams containing "United States" in the name
+- show the players with a name starting with "J"
 
-Copy the terminal output and paste the results into the `part-4/queries.md` file.
+Copy the terminal output (both your query and the results) and paste the results into the `part-4/queries.md` file.
 
 ### Release 2: `JOIN`
 In your terminal, create and execute the following queries:
-- show all the books published by "Addison-Wesley"
-- show all the books authored by "Jonathan Penn"
-- show all the publishers where the book title contains "iOS"
-- show all the publishers for the author "Sandi Metz"
+- show all the players on the "Cleveland Caveliers" team
+- show all the players who play on a "Soccer" team
+- show all the teams where the position contains "Forward"
+- show all the teams for the player "Shannon Boxx"
 
-Copy the terminal output and paste the results into the `part-4/queries.md` file.
+Copy the terminal output (both your query and the results) and paste the results into the `part-4/queries.md` file.
 
 ### Release 3: `INSERT`
 In your terminal, create and execute the following queries:
-- add a new author to the authors table
-- add a new publisher to the publishers table
-- add a new book to the books table with the new author and publisher
+- add a new player to the players table
+- add a new team to the teams table
+- add a new position to the positions table with the new player and team
 
-Copy the terminal output and paste the results into the `part-4/queries.md` file.
+Copy the terminal output (both your query and the results) and paste the results into the `part-4/queries.md` file.
 
 ### Release 4: `UPDATE`
 In your terminal, create and execute the following queries:
-- update the author named "David Black" to "David A. Black"
+- update the player named "Hope Solo" to "Hope Amelia Solo"
 
-Copy the terminal output and paste the results into the `part-4/queries.md` file.
+Copy the terminal output (both your query and the results) and paste the results into the `part-4/queries.md` file.
 
 ### Release 5: `DELETE`
 In your terminal, create and execute the following queries:
-- Delete the book created in Release 3
-- Delete the author created in Release 3
-- Delete the publisher created in Release 3
+- Delete the player created in Release 3
+- Delete the team created in Release 3
+- Delete the position created in Release 3
 
-Copy the terminal output and paste the results into the `part-4/queries.md` file.
+Copy the terminal output (both your query and the results) and paste the results into the `part-4/queries.md` file.
 
 ## Conclusion
 You are done with part-4. If you have not committed your changes, please do so before moving onto part-5.
