@@ -23,15 +23,15 @@ Copy the terminal output (both your query and the results) and paste the results
 
 ### Release 1: `WHERE`
 In your terminal, create and execute the following queries:
-- show all the teams containing "Chicago" in the name
+- show all the teams containing "United States" in the name
 - show the players with a name starting with "J"
 
 Copy the terminal output (both your query and the results) and paste the results into the `part-4/queries.md` file.
 
 ### Release 2: `JOIN`
 In your terminal, create and execute the following queries:
-- show all the players on the "Chicago Blackhawks" team
-- show all the players who play on a team in "Chicago"
+- show all the players on the "Cleveland Caveliers" team
+- show all the players who play on a "Soccer" team
 - show all the teams where the position contains "Forward"
 - show all the teams for the player "Shannon Boxx"
 
