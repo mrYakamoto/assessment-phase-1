@@ -1,7 +1,7 @@
 class BluRay
   attr_reader :runtime, :title
 
-  def initialize(args)
+  def initialize(args = {})
     @runtime = args[:runtime]
     @title   = args[:title]
   end

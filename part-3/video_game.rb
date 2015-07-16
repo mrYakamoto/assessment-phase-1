@@ -1,7 +1,7 @@
 class VideoGame
   attr_reader :console, :title
 
-  def initialize(args)
+  def initialize(args = {})
     @console = args[:console]
     @title   = args[:title]
   end

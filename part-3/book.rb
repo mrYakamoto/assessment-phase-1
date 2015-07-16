@@ -1,7 +1,7 @@
 class Book
   attr_reader :length, :title, :author
 
-  def initialize(args)
+  def initialize(args = {})
     @length = args[:length]
     @title  = args[:title]
     @author = args[:author]

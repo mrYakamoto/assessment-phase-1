@@ -1,7 +1,7 @@
 class CD
   attr_reader :runtime, :title, :artist
 
-  def initialize(args)
+  def initialize(args ={})
     @runtime = args[:runtime]
     @title   = args[:title]
     @artist  = args[:artist]
