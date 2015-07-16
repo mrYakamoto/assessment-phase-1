@@ -44,9 +44,9 @@ RSpec.describe ShippingContainer do
       end
     end
 
-    describe '#containers_count' do
-      it 'returns the number of containers currently loaded' do
-        expect(shipping_container.containers_count).to eq 2
+    describe '#crates_count' do
+      it 'returns the number of crates currently loaded' do
+        expect(shipping_container.crates_count).to eq 2
       end
     end
 
