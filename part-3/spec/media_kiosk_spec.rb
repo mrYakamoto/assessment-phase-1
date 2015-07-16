@@ -51,16 +51,18 @@ describe MediaKiosk do
       expect(media_kiosk.items).to_not include video_game
     end
 
-    it 'has available items' do
-      allow(dvd).to receive(:available?).and_return false
+    it 'available and undamaged items are avaiable items' do
+      allow(video_game).to receive(:available?).and_return false
+      allow(blu_ray).to receive(:damaged?).and_return true
 
-      expect(media_kiosk.available_items).to match_array [video_game, blu_ray]
+      expect(media_kiosk.available_items).to match_array [dvd]
     end
 
-    it 'has checked_out_items' do
-      allow(dvd).to receive(:available?).and_return false
+    it 'checked out and damaged items are unavailable items' do
+      allow(video_game).to receive(:checked_out?).and_return true
+      allow(dvd).to receive(:damaged?).and_return true
 
-      expect(media_kiosk.checked_out_items).to match_array [dvd]
+      expect(media_kiosk.unavailable_items).to match_array [video_game, dvd]
     end
   end
 end

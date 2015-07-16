@@ -27,10 +27,10 @@ class MediaKiosk
   end
 
   def available_items
-    items.select(&:available?)
+    items.select { |item| item.available? && !item.damaged? }
   end
 
-  def checked_out_items
-    items.reject(&:available?)
+  def unavailable_items
+    items - available_items
   end
 end
