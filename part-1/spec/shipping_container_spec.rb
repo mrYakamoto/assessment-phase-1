@@ -51,7 +51,7 @@ RSpec.describe ShippingContainer do
     end
 
     describe '#add_crate' do
-      let(crate) { Crate.new(weight: 50) }
+      let(:crate) { Crate.new(weight: 50) }
       context 'when within max weight and max containers' do
         it 'returns true' do
           expect(shipping_container.add_crate(crate)).to be true
