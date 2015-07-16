@@ -31,7 +31,7 @@ RSpec.describe ShippingContainer do
   describe 'working with crates', { pending: true } do
     describe '#current_weight' do
       context 'when empty' do
-        let(:shipping_container) { ShippingContainer.new({destination: 'Hawaii', max_containers: 10, max_weight: 500})}
+        let(:shipping_container) { ShippingContainer.new({destination: 'Hawaii', crates: [], max_containers: 10, max_weight: 500})}
         it 'returns 0' do
           expect(shipping_container.current_weight).to be 0
         end
