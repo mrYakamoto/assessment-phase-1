@@ -38,4 +38,23 @@ describe Book do
       expect(book).to be_available
     end
   end
+
+  describe "maintenance" do
+    it "reports whether or not its damaged" do
+      expect(book).to_not be_damaged
+    end
+
+    it "can be damaged" do
+      book.record_damage
+      expect(book).to be_damaged
+    end
+
+    it "can be repaired" do
+      book.record_damage
+      expect(book).to be_damaged
+
+      book.repair
+      expect(book).to_not be_damaged
+    end
+  end
 end

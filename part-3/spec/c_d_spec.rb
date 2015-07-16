@@ -38,4 +38,23 @@ describe CD do
       expect(cd).to be_available
     end
   end
+
+  describe "maintenance" do
+    it "reports whether or not its damaged" do
+      expect(cd).to_not be_damaged
+    end
+
+    it "can be damaged" do
+      cd.record_damage
+      expect(cd).to be_damaged
+    end
+
+    it "can be repaired" do
+      cd.record_damage
+      expect(cd).to be_damaged
+
+      cd.repair
+      expect(cd).to_not be_damaged
+    end
+  end
 end

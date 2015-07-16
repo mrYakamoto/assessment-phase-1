@@ -34,4 +34,23 @@ describe VideoGame do
       expect(video_game).to be_available
     end
   end
+
+  describe "maintenance" do
+    it "reports whether or not its damaged" do
+      expect(video_game).to_not be_damaged
+    end
+
+    it "can be damaged" do
+      video_game.record_damage
+      expect(video_game).to be_damaged
+    end
+
+    it "can be repaired" do
+      video_game.record_damage
+      expect(video_game).to be_damaged
+
+      video_game.repair
+      expect(video_game).to_not be_damaged
+    end
+  end
 end

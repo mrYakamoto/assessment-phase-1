@@ -34,4 +34,23 @@ describe DVD do
       expect(dvd).to be_available
     end
   end
+
+  describe "maintenance" do
+    it "reports whether or not its damaged" do
+      expect(dvd).to_not be_damaged
+    end
+
+    it "can be damaged" do
+      dvd.record_damage
+      expect(dvd).to be_damaged
+    end
+
+    it "can be repaired" do
+      dvd.record_damage
+      expect(dvd).to be_damaged
+
+      dvd.repair
+      expect(dvd).to_not be_damaged
+    end
+  end
 end
