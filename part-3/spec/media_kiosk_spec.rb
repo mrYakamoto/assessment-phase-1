@@ -57,7 +57,7 @@ describe MediaKiosk do
       expect(media_kiosk.available_items).to match_array [video_game, blu_ray]
     end
 
-    it 'checked_out_items' do
+    it 'has checked_out_items' do
       allow(dvd).to receive(:available?).and_return false
 
       expect(media_kiosk.checked_out_items).to match_array [dvd]

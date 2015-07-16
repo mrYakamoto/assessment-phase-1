@@ -37,7 +37,7 @@ describe Library do
       expect(library.available_items).to match_array [book]
     end
 
-    it 'checked_out_items' do
+    it 'has checked_out_items' do
       allow(cd).to receive(:available?).and_return false
 
       expect(library.checked_out_items).to match_array [cd]
