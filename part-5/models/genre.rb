@@ -1,15 +1,15 @@
 class Genre
 
   attr_accessor :name, :description
-  attr_reader :playlists
+  attr_reader :songs
 
   def initialize(args = {})
     @name = args.fetch(:name)
     @description = args.fetch(:descriptions)
-    @playlists = []
+    @songs = []
   end
 
-  def add_playlist(playlist)
-    playlists << playlist
+  def add_song(song)
+    songs << song
   end
 end
