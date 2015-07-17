@@ -28,16 +28,16 @@ The three tests in the example group should be failing.  Update the `League` cla
 
 *Do not modify the tests.*
 
-### Release 1:  `SockDrawer#supply_random_pair_of_socks`
-Now pretend we need a pair of socks.  We don't have any particular sock for the sock drawer to match.  Instead, we want the sock drawer to give us any pair of socks that it can find among its socks.
+### Release 1:  `League#playoff_teams`
+Now pretend the season is over, and only the top teams make the cut. We'll now add the functionality to select the teams that are allowed to enter the post season.
 
-A group of tests is provided to describe how an instance of `SockDrawer` behaves when told to supply a random pair of socks.  This group of tests is [tagged](https://www.relishapp.com/rspec/rspec-core/v/2-4/docs/command-line/tag-option) `supply_random_pair_of_socks`.  To run the tests specific to the `#supply_random_pair_of_socks` method, from the root directory run:
+Tests have been provided to describe how an instance of `League` behaves when told to select the playoff teams.  The tests are [tagged](https://www.relishapp.com/rspec/rspec-core/v/2-4/docs/command-line/tag-option) `playoff_teams`.  To run the tests specific to the `#playoff_teams` method, from the root directory run:
 
 ```
-rspec --tag supply_random_pair_of_socks
+rspec --tag playoff_teams
 ```
 
-Update the `SockDrawer` class in `sock_drawer.rb` to make the tests pass.
+Update the `League` class in `league.rb` to make the tests pass.
 
 *Do not modify the tests.*
 
