@@ -1,16 +1,15 @@
-class Category
+class Genre
 
   attr_accessor :name, :description
-  attr_reader :products
+  attr_reader :songs
 
   def initialize(args = {})
     @name = args.fetch(:name)
     @description = args.fetch(:descriptions)
-    @products = []
+    @songs = []
   end
 
-  def add_product(product)
-    products << product
-    product.add_category(self)
+  def add_song(song)
+    songs << song
   end
 end
