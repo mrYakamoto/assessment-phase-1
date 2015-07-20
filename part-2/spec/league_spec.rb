@@ -35,4 +35,10 @@ RSpec.describe League do
       expect(league.playoff_teams.map(&:name)).to eq ['Jets', 'Red Wings', 'Ducks', 'Blues']
     end
   end
+
+  describe '#postition_for(name)', { postion_for: true } do
+    it 'returns the position of the team with the passed in name' do
+      expect(league.position_for('Jets')).to eq 1
+    end
+  end
 end

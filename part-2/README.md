@@ -10,6 +10,7 @@ A league is a collection of teams. We can initialize a league with a collection 
 
 - What is the current ranking of the teams? (Highest to Lowest)
 - What teams will make the playoffs? (Top 4 Teams)
+- What place is a team current holding
 
 ## Running the Tests
 If you have questions on how to run the tests, please check the [rspec-help](../rspec-help.md) document.
@@ -35,6 +36,19 @@ Tests have been provided to describe how an instance of `League` behaves when to
 
 ```
 rspec --tag playoff_teams
+```
+
+Update the `League` class in `league.rb` to make the tests pass.
+
+*Do not modify the tests.*
+
+### Release 2: 'League#position_for'
+If you wanted to know the position for a specific team you can ask the league what place a team is in using the team name.
+
+Tests have been provided to describe how an instance of 'League' behaves when told to supply the postion for a given team. This test has been [tagged](https://www.relishapp.com/rspec/rspec-core/v/2-4/docs/command-line/tag-option) `position_for'. To run the tests specific to the `#position_for` method, from the root directory run:
+
+```
+rspec --tag position_for
 ```
 
 Update the `League` class in `league.rb` to make the tests pass.
