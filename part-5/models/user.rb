@@ -11,7 +11,6 @@ class User
 
   def add_playlist(playlist)
     playlists << playlist
-    playlist.add_user(self)
   end
 
 end
