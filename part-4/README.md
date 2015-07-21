@@ -32,8 +32,8 @@ Copy the terminal output (both your query and the results) and paste the results
 In your terminal, create and execute the following queries:
 - show all the players on the "Cleveland Caveliers" team
 - show all the players who play on a "Soccer" team
-- show all the teams where the position contains "Forward"
-- show all the teams for the player "Shannon Boxx"
+- show all the teams with a position called "Forward"
+- show all the teams the player "Shannon Boxx" plays for
 
 Copy the terminal output (both your query and the results) and paste the results into the `part-4/queries.md` file.
 
