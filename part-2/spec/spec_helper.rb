@@ -1,3 +1,3 @@
-require_relative "../sock"
-require_relative "../sock_matcher"
-require_relative "../sock_drawer"
+require_relative "../league"
+require_relative "../points_calculator"
+require_relative "../team"

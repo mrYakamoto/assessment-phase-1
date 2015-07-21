@@ -2,42 +2,56 @@
 ## Summary
 In this part of the assessment, we are going to be working with a collection of objects.  We've been provided three classes and tests that describe the behaviors of the classes.  Take a look at the provided code before moving on to completing this part of the assessment.
 
-### `Sock` and `SockMatcher`
-The `Sock` and `SockMatcher` classes have been written for us.  Furthermore, tests have been provided that describe the behaviors of these classes.  Read the code for these classes and the test code because we'll be working with these objects later
+### 'Team' and 'PointsCalculator'
+The `Team` and `PointsCalculator` classes have been written for us.  Furthermore, tests have been provided that describe the behaviors of these classes.  Read the code for these classes and the test code because we'll be working with these objects later
 
-### `SockDrawer`
-The `SockDrawer` class is somewhat complete.  We can initialize an instance of `SockDrawer` with a collection of socks and a matcher.  The challenge for this part of the assessment is to write methods that provide a `SockDrawer` instance with ways of interacting with its socks.  The desired behaviors have been described in tests:
+### `League`
+A league is a collection of teams. We can initialize a league with a collection of teams and a points calculator. Your task is to add functionality to the `League` class to allow it to answer the following questions:
 
-- A sock drawer will be able to match one of its socks to a given sock.
-- A sock drawer will be able to match two of its own socks.
+- What is the current ranking of the teams? (Highest to Lowest)
+- What teams will make the playoffs? (Top 4 Teams)
+- What place is a team current holding
 
 ## Running the Tests
 If you have questions on how to run the tests, please check the [rspec-help](../rspec-help.md) document.
 
 ## Releases
-### Release 0: `SockDrawer#supply_match_for`
-Pretend we have a single sock and we need to find a match for it.  We believe that a matching sock is located in the sock drawer.  So, we're going to ask the sock drawer to give us a match for our sock.
+### Release 0: `League#standings`
+`Team` objects know their record, and the `PointsCalculator` knows how to convert this data into a single comparable value. To determine the current standing of the league, we'll need to leverage these objects to find out how the teams stack up.
 
-A group of tests is provided to describe how an instance of `SockDrawer` behaves when told to supply a match for a sock.  This group of tests is [tagged](https://www.relishapp.com/rspec/rspec-core/v/2-4/docs/command-line/tag-option) `supply_match_for`.  To run the tests specific to the `#supply_match_for` method, from the root directory run:
+A group of tests is provided to describe how an instance of `League` behaves when told to supply the current standings.  This group of tests is [tagged](https://www.relishapp.com/rspec/rspec-core/v/2-4/docs/command-line/tag-option) `standings`.  To run the tests specific to the `#standings` method, from the root directory run:
 
 ```
-rspec --tag supply_match_for
+rspec --tag standings
 ```
 
-The three tests in the example group should be failing.  Update the `SockDrawer` class in `sock_drawer.rb` to make the tests pass.
+The three tests in the example group should be failing.  Update the `League` class in `league.rb` to make the tests pass.
 
 *Do not modify the tests.*
 
-### Release 1:  `SockDrawer#supply_random_pair_of_socks`
-Now pretend we need a pair of socks.  We don't have any particular sock for the sock drawer to match.  Instead, we want the sock drawer to give us any pair of socks that it can find among its socks.
+### Release 1:  `League#playoff_teams`
+Now pretend the season is over, and only the top teams make the cut. We'll now add the functionality to select the teams that are allowed to enter the post season.
 
-A group of tests is provided to describe how an instance of `SockDrawer` behaves when told to supply a random pair of socks.  This group of tests is [tagged](https://www.relishapp.com/rspec/rspec-core/v/2-4/docs/command-line/tag-option) `supply_random_pair_of_socks`.  To run the tests specific to the `#supply_random_pair_of_socks` method, from the root directory run:
+Tests have been provided to describe how an instance of `League` behaves when told to select the playoff teams.  The tests are [tagged](https://www.relishapp.com/rspec/rspec-core/v/2-4/docs/command-line/tag-option) `playoff_teams`.  To run the tests specific to the `#playoff_teams` method, from the root directory run:
 
 ```
-rspec --tag supply_random_pair_of_socks
+rspec --tag playoff_teams
 ```
 
-Update the `SockDrawer` class in `sock_drawer.rb` to make the tests pass.
+Update the `League` class in `league.rb` to make the tests pass.
+
+*Do not modify the tests.*
+
+### Release 2: 'League#position_for'
+If you wanted to know the position for a specific team you can ask the league what place a team is in using the team name.
+
+Tests have been provided to describe how an instance of 'League' behaves when told to supply the postion for a given team. This test has been [tagged](https://www.relishapp.com/rspec/rspec-core/v/2-4/docs/command-line/tag-option) `position_for'. To run the tests specific to the `#position_for` method, from the root directory run:
+
+```
+rspec --tag position_for
+```
+
+Update the `League` class in `league.rb` to make the tests pass.
 
 *Do not modify the tests.*
 
