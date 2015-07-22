@@ -22,9 +22,13 @@ In the tests for the `ShippingContainer` class is an example group `"attributes"
 ### Release 1:  Working with Crates
 In the tests for the `ShippingContainer` class is an example group `"working with crates"`.  The example group is currently marked as pending.
 
-On Line 27, change `true` to `false`.  The line should then read ...
-
 ```ruby
+# in spec/shipping_container_spec.rb
+
+# CHANGE THIS
+describe 'working with crates', { pending: true } do
+
+# TO THIS
 describe 'working with crates', { pending: false } do
 ```
 
