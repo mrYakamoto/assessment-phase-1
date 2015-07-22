@@ -36,7 +36,7 @@ RSpec.describe League do
     end
   end
 
-  describe '#postition_for(name)', { postion_for: true } do
+  describe '#position_for(name)', { position_for: true } do
     it 'returns the position of the team with the passed in name' do
       expect(league.position_for('Jets')).to eq 1
     end

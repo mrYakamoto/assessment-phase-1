@@ -25,7 +25,7 @@ A group of tests is provided to describe how an instance of `League` behaves whe
 rspec --tag standings
 ```
 
-The three tests in the example group should be failing.  Update the `League` class in `league.rb` to make the tests pass.
+The tests in the example group should be failing.  Update the `League` class in `league.rb` to make the tests pass.
 
 *Do not modify the tests.*
 
@@ -45,7 +45,7 @@ Update the `League` class in `league.rb` to make the tests pass.
 ### Release 2: 'League#position_for'
 If you wanted to know the position for a specific team you can ask the league what place a team is in using the team name.
 
-Tests have been provided to describe how an instance of 'League' behaves when told to supply the postion for a given team. This test has been [tagged](https://www.relishapp.com/rspec/rspec-core/v/2-4/docs/command-line/tag-option) `position_for'. To run the tests specific to the `#position_for` method, from the root directory run:
+Tests have been provided to describe how an instance of 'League' behaves when told to supply the position for a given team. This test has been [tagged](https://www.relishapp.com/rspec/rspec-core/v/2-4/docs/command-line/tag-option) `position_for'. To run the tests specific to the `#position_for` method, from the root directory run:
 
 ```
 rspec --tag position_for
