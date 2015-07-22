@@ -30,7 +30,7 @@ Copy the terminal output (both your query and the results) and paste the results
 
 ### Release 2: `JOIN`
 In your terminal, create and execute the following queries:
-- show all the players on the "Cleveland Caveliers" team
+- show all the players on the "Cleveland Cavaliers" team
 - show all the players who play on a "Soccer" team
 - show all the teams with a position called "Forward"
 - show all the teams the player "Shannon Boxx" plays for
