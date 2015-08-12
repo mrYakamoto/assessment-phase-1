@@ -9,7 +9,7 @@ RSpec.describe League do
   let(:flames) { Team.new({name: 'Flames', wins: 3, losses: 7, overtime_losses: 0}) }
   let(:jets) { Team.new({name: 'Jets', wins: 9, losses: 0, overtime_losses: 1}) }
   let(:penguins) { Team.new({name: 'Penguins', wins: 4, losses: 4, overtime_losses: 2}) }
-  let(:red_wings) { Team.new({name: 'Red Wings', wins: 8, losses: 2, overtime_losses: 0}) }
+  let(:red_wings) { Team.new({name: 'Red Wings', wins: 8, losses: 2, overtime_losses: 1}) }
   let(:teams) { [blues, capitals, coyotes, ducks, flames, jets, penguins, red_wings] }
 
   let(:calculator) { PointsCalculator.new }
