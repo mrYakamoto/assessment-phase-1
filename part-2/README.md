@@ -9,7 +9,7 @@ The `Team` and `PointsCalculator` classes have been written for us.  Furthermore
 A league is a collection of teams. We can initialize a league with a collection of teams and a points calculator. Your task is to add functionality to the `League` class to allow it to answer the following questions:
 
 - What is the current ranking of the teams? (Highest to Lowest)
-- What teams will make the playoffs? (Top 4 Teams)
+- What teams will make the playoffs? (Top half of the teams)
 - What place is a team current holding
 
 ## Running the Tests
