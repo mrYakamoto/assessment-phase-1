@@ -7,7 +7,7 @@ In this challenge we'll design a database to persist the data provided by the mo
 The basis of this application is a music sharing application. This has been simplified to try to focus solely on what data is required to fulfill the model's intended concept and show how these models would relate to each other.
 
 ### Submitting Your Solution
-For this part of the assessment, we'll need to create and submit an image file of the designed database schema.  Designing the schema using [SQL Designer](https://socrates.devbootcamp.com/sql) and submitting a screenshot of the final design is the suggested method for completing this challenge.  However, drawing your schema using another medium (e.g., pen and paper) is also acceptable, provided the visualization is legible and an image file depicting the final schema design can be added to the repo (e.g., a photo).
+For this part of the assessment, we'll need to create and submit an image file of the designed database schema.  Designing the schema using [SQL Designer](https://schemadesigner.devbootcamp.com) and submitting a screenshot of the final design is the suggested method for completing this challenge.  However, drawing your schema using another medium (e.g., pen and paper) is also acceptable, provided the visualization is legible and an image file depicting the final schema design can be added to the repo (e.g., a photo).
 
 ## Release 0: Model Attributes
 Create the required tables with the corresponding columns that would support the data requirements of each model found in the `part-5/models` directory.
