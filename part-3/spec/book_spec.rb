@@ -15,6 +15,14 @@ describe Book do
     expect(book.author).to eq "Howard Pyle"
   end
 
+  it 'does not have a runtime' do
+    expect(book.runtime).to raise_error(NameError)
+  end
+
+  it 'does not have an artist' do
+    expect(book.artist).to raise_error(NameError)
+  end
+
   describe 'availability' do
     it 'can be available' do
       expect(book).to be_available

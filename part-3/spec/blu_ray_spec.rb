@@ -11,6 +11,14 @@ describe BluRay do
     expect(blu_ray.runtime).to eq 104
   end
 
+  it 'does not have an author' do
+    expect(blu_ray.author).to raise_error(NameError)
+  end
+
+  it 'does not have a length' do
+    expect(blu_ray.length).to raise_error(NameError)
+  end
+
   describe 'availability' do
     it 'can be available' do
       expect(blu_ray).to be_available
