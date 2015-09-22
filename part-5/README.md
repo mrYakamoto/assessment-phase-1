@@ -1,13 +1,13 @@
 # Part 5: Schema Design
 
 ## Summary
-In this challenge we'll design a database to persist the data provided by the models in the application.
+In this challenge we'll design a database to persist the data modeled by the Ruby objects in the application. These models are located in `part-5/models`.
 
 ### Background
 The basis of this application is a music sharing application. This has been simplified to try to focus solely on what data is required to fulfill the model's intended concept and show how these models would relate to each other.
 
 ### Submitting Your Solution
-For this part of the assessment, we'll need to create and submit an image file of the designed database schema.  Designing the schema using [SQL Designer](https://schemadesigner.devbootcamp.com) and submitting a screenshot of the final design is the suggested method for completing this challenge.  However, drawing your schema using another medium (e.g., pen and paper) is also acceptable, provided the visualization is legible and an image file depicting the final schema design can be added to the repo (e.g., a photo).
+Create and submit an image file of your designed database schema.  Design the schema using [SQL Designer](https://schemadesigner.devbootcamp.com) and submit a screenshot of the final design.
 
 ## Release 0: Model Attributes
 Create the required tables with the corresponding columns that would support the data requirements of each model found in the `part-5/models` directory.
