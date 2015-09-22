@@ -12,11 +12,15 @@ describe BluRay do
   end
 
   it 'does not have an author' do
-    expect(blu_ray.author).to raise_error(NameError)
+    expect{blu_ray.author}.to raise_error(NameError)
   end
 
   it 'does not have a length' do
-    expect(blu_ray.length).to raise_error(NameError)
+    expect{blu_ray.length}.to raise_error(NameError)
+  end
+
+  it 'does not have an artist' do
+    expect{blu_ray.artist}.to raise_error(NameError)
   end
 
   describe 'availability' do

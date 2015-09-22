@@ -11,6 +11,18 @@ describe VideoGame do
     expect(video_game.console).to eq 'Xbox'
   end
 
+  it 'does not have an artist' do
+    expect{video_game.artist}.to raise_error(NameError)
+  end
+
+  it 'does not have a length' do
+    expect{video_game.length}.to raise_error(NameError)
+  end
+
+  it 'does not have a runtime' do
+    expect{video_game.runtime}.to raise_error(NameError)
+  end
+
   describe 'availability' do
     it 'can be available' do
       expect(video_game).to be_available

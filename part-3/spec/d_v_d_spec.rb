@@ -11,6 +11,18 @@ describe DVD do
     expect(dvd.runtime).to eq 143
   end
 
+  it 'does not have an artist' do
+    expect{dvd.artist}.to raise_error(NameError)
+  end
+
+  it 'does not have an author' do
+    expect{dvd.artist}.to raise_error(NameError)
+  end
+
+  it 'does not have a length' do
+    expect{dvd.length}.to raise_error(NameError)
+  end
+
   describe 'availability' do
     it 'can be available' do
       expect(dvd).to be_available

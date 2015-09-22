@@ -16,11 +16,11 @@ describe Book do
   end
 
   it 'does not have a runtime' do
-    expect(book.runtime).to raise_error(NameError)
+    expect{book.runtime}.to raise_error(NameError)
   end
 
   it 'does not have an artist' do
-    expect(book.artist).to raise_error(NameError)
+    expect{book.artist}.to raise_error(NameError)
   end
 
   describe 'availability' do
