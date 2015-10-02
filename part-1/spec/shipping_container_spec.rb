@@ -19,8 +19,8 @@ RSpec.describe ShippingContainer do
       expect(shipping_container.max_weight).to eq 800
     end
 
-    it 'has a max_containers' do
-      expect(shipping_container.max_containers).to eq 10
+    it 'has a max_crates' do
+      expect(shipping_container.max_crates).to eq 10
     end
 
     it 'has crates' do
