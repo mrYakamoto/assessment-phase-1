@@ -3,7 +3,7 @@ require_relative '../crate'
 
 RSpec.describe ShippingContainer do
   let(:crates) { [Crate.new(weight: 300), Crate.new({weight: 100})] }
-  let(:shipping_container) { ShippingContainer.new({destination: 'Hawaii', crates: crates, max_weight: 500, max_containers: 10}) }
+  let(:shipping_container) { ShippingContainer.new({destination: 'Hawaii', crates: crates, max_weight: 500, max_crates: 10}) }
 
   describe 'attributes' do
     it 'has a destination' do
@@ -31,7 +31,7 @@ RSpec.describe ShippingContainer do
   describe 'working with crates', { pending: true } do
     describe '#current_weight' do
       context 'when empty' do
-        let(:shipping_container) { ShippingContainer.new({destination: 'Hawaii', crates: [], max_containers: 10, max_weight: 500})}
+        let(:shipping_container) { ShippingContainer.new({destination: 'Hawaii', crates: [], max_crates: 10, max_weight: 500})}
         it 'returns 0' do
           expect(shipping_container.current_weight).to be 0
         end
@@ -56,6 +56,11 @@ RSpec.describe ShippingContainer do
         it 'returns true' do
           expect(shipping_container.add_crate(crate)).to be true
         end
+
+        it 'adds crate to shipping container' do
+          shipping_container.add_crate(crate)
+          expect(shipping_container.crates).to include(crate)
+        end
       end
 
       context 'when exceeding max weight' do
@@ -69,6 +74,11 @@ RSpec.describe ShippingContainer do
         let(:shipping_container) { ShippingContainer.new({destination: 'Hawaii', crates: crates, max_weight: 500, max_containers: 2})}
         it 'returns false' do
           expect(shipping_container.add_crate(crate)).to be false
+        end
+
+        it 'does not add crate to the shipping container' do
+          shipping_container.add_crate(crate)
+          expect(shipping_container.crates).not_to include(crate)
         end
       end
     end
