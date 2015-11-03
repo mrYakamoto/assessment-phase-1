@@ -37,7 +37,7 @@ RSpec.describe ShippingContainer do
         end
       end
 
-      context 'when one or more containers has been loaded' do
+      context 'when one or more crates has been loaded' do
         it 'returns the total weight of the crates' do
           expect(shipping_container.current_weight).to eq 400
         end
@@ -52,7 +52,7 @@ RSpec.describe ShippingContainer do
 
     describe '#add_crate' do
       let(:crate) { Crate.new({weight: 50}) }
-      context 'when within max weight and max containers' do
+      context 'when within max weight and max crates' do
         it 'returns true' do
           expect(shipping_container.add_crate(crate)).to be true
         end
@@ -64,14 +64,14 @@ RSpec.describe ShippingContainer do
       end
 
       context 'when exceeding max weight' do
-        let(:shipping_container) { ShippingContainer.new({destination: 'Hawaii', crates: crates, max_weight: 425, max_containers: 10})}
+        let(:shipping_container) { ShippingContainer.new({destination: 'Hawaii', crates: crates, max_weight: 425, max_crates: 10})}
         it 'returns false' do
           expect(shipping_container.add_crate(crate)).to be false
         end
       end
 
-      context 'when exceeding max containers' do
-        let(:shipping_container) { ShippingContainer.new({destination: 'Hawaii', crates: crates, max_weight: 500, max_containers: 2})}
+      context 'when exceeding max crates' do
+        let(:shipping_container) { ShippingContainer.new({destination: 'Hawaii', crates: crates, max_weight: 500, max_crates: 2})}
         it 'returns false' do
           expect(shipping_container.add_crate(crate)).to be false
         end
