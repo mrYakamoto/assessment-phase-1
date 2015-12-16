@@ -3,17 +3,14 @@ class ShippingContainer
   attr_accessor :max_weight
 
   def initialize(args={})
-    @destination = args[:destination]
+    @destination = args.fetch(:destination, 'unknown')
     @max_weight = args[:max_weight]
     @max_crates = args[:max_crates]
     @crates = args.fetch(:crates, [])
-
   end
 
   def current_weight
-    total_weight = 0
-    crates.each { |crate| total_weight += crate.weight }
-    total_weight
+    crates.inject(0){|sum, crate| sum += crate.weight}
   end
 
   def crates_count
@@ -22,7 +19,7 @@ class ShippingContainer
 
   def add_crate(crate)
     return false if (current_weight + crate.weight) > max_weight
-    return false if crates_count == max_crates
+    return false if crates_count >= max_crates
     crates << crate
     true
   end
