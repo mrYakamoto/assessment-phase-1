@@ -8,8 +8,7 @@ class League
   end
 
   def standings
-    teams.sort_by! { |team| calculator.points_for_team(team)}
-    teams.reverse
+    teams.sort_by! { |team| -calculator.points_for_team(team) }
   end
 
   def playoff_teams
