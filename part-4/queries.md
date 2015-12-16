@@ -137,6 +137,56 @@ id          name
 12          Julie Johnst
 13          Edson Pele
 
+<!-- RELEASE 5 -->
+sqlite> DELETE FROM players
+   ...> WHERE name = 'Edson Pele';
+sqlite> SELECT * FROM players;
+id          name
+----------  ------------
+1           Shannon Boxx
+2           Hope Amelia
+3           Abby Wambach
+4           Patrick Kane
+5           Jonathan Toe
+6           Lebron James
+7           Kyrie Irving
+8           Tony Romo
+9           Dez Bryant
+10          Kerri Walsh
+11          Misty May-Tr
+12          Julie Johnst
+
+sqlite> DELETE FROM teams
+   ...> WHERE name = 'Atlanta Fire Ants';
+sqlite> SELECT * FROM teams;
+id          name                           sport
+----------  -----------------------------  ----------
+1           United States National Soccer  Soccer
+2           Chicago Blackhawks             Hockey
+3           Cleveland Cavaliers            Basketball
+4           Dallas Cowboys                 Football
+5           United States National Volley  Volleyball
+6           Chicago Red Stars              Soccer
+
+sqlite> DELETE FROM positions
+   ...> WHERE title = 'Left Winger' AND jersey_number = 13;
+sqlite> SELECT * FROM positions;
+id          title       jersey_number  team_id     player_id
+----------  ----------  -------------  ----------  ----------
+1           Midfielder  7              1           1
+2           Goalkeeper  1              1           2
+3           Forward     20             1           3
+4           Right Wing  88             2           4
+5           Center      19             2           5
+6           Forward     23             3           6
+7           Point Guar  2              3           7
+8           Quarterbac  9              4           8
+9           Wide Recei  88             4           9
+10          Setter      0              5           10
+11          Hitter      0              5           11
+12          Midfielder  38             6           1
+13          Defender    19             1           12
+14          Defender    23             6           12
 
 
 
