@@ -47,3 +47,46 @@ id          title       jersey_number  team_id     player_id
 12          Midfielder  38             6           1
 13          Defender    19             1           12
 14          Defender    23             6           12
+
+<!-- RELEASE 1 -->
+sqlite> SELECT * FROM teams
+   ...> WHERE name LIKE '%United States%';
+id          name                           sport
+----------  -----------------------------  ----------
+1           United States National Soccer  Soccer
+5           United States National Volley  Volleyball
+
+sqlite> SELECT * FROM players
+   ...> WHERE name LIKE 'J%';
+id          name
+----------  --------------
+5           Jonathan Toews
+12          Julie Johnston
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
