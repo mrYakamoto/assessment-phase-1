@@ -116,6 +116,27 @@ id          title       jersey_number  team_id     player_id
 14          Defender    23             6           12
 15          Left Winge  13             7           13
 
+<!-- RELEASE 4 -->
+sqlite> UPDATE players
+   ...> SET name = 'Hope Amelia Solo'
+   ...> WHERE name = 'Hope Solo';
+sqlite> SELECT * FROM players;
+id          name
+----------  ------------
+1           Shannon Boxx
+2           Hope Amelia
+3           Abby Wambach
+4           Patrick Kane
+5           Jonathan Toe
+6           Lebron James
+7           Kyrie Irving
+8           Tony Romo
+9           Dez Bryant
+10          Kerri Walsh
+11          Misty May-Tr
+12          Julie Johnst
+13          Edson Pele
+
 
 
 
