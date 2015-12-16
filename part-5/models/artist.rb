@@ -1,4 +1,4 @@
-daclass Artist
+class Artist
 
   attr_reader :name, :songs
 
